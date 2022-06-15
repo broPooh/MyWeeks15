@@ -11,8 +11,39 @@ import RxCocoa
 import SnapKit
 import RxAlamofire
 
-class ValidationViewModel {
+protocol CommonViewModel {
+    
+    associatedtype Input
+    associatedtype Output
+    func transform(input: Input) -> Output
+    var disposBag: DisposeBag { get set }
+}
+
+
+
+class ValidationViewModel: CommonViewModel {
+    var disposBag = DisposeBag()
     var validText = BehaviorRelay<String>(value: "최소 8자 이상 필요해요")
+    
+    struct Input {
+        let text: ControlProperty<String?>
+        let tap: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let validStatus: Observable<Bool>
+        let validText: BehaviorRelay<String>
+        let sceneTransition: ControlEvent<Void>
+    }
+    
+    func transform(input: Input) -> Output {
+        let resultText = input.text
+            .orEmpty
+            .map { $0.count >= 5 }
+            .share(replay: 1, scope: .whileConnected)
+        
+        return Output(validStatus: resultText, validText: validText, sceneTransition: input.tap)
+    }
 }
 
 class ValidationViewConroller: UIViewController {
@@ -27,7 +58,11 @@ class ValidationViewConroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setup()
+        bind()
+    }
+    
+    func rxBasic() {
         viewModel.validText
             .asDriver()
             .drive(nameValidationLabel.rx.text)
@@ -40,12 +75,12 @@ class ValidationViewConroller: UIViewController {
             .share(replay: 1, scope: .whileConnected)
         
         validation
-            .bind(to: button.rx.isEnabled)
+            .bind(to: button.rx.isEnabled, nameValidationLabel.rx.isHidden)
             .disposed(by: disposBag)
         
-        validation
-            .bind(to: nameValidationLabel.rx.isHidden)
-            .disposed(by: disposBag)
+//        validation
+//            .bind(to: nameValidationLabel.rx.isHidden)
+//            .disposed(by: disposBag)
         
         button
             .rx.tap
@@ -53,11 +88,30 @@ class ValidationViewConroller: UIViewController {
                 self.present(ReactiveViewController(), animated: true, completion: nil)
             }
             .disposed(by: disposBag)
-        
-        setup()
-        
     }
     
+    func bind() {
+        let input = ValidationViewModel.Input(text: nameTextFiled.rx.text, tap: button.rx.tap)
+        let output = viewModel.transform(input: input)
+        
+        output.validStatus
+            .bind(to: button.rx.isEnabled, nameValidationLabel.rx.isHidden)
+            .disposed(by: disposBag)
+        
+//        output.validStatus
+//            .bind(to: nameValidationLabel.rx.isHidden)
+//            .disposed(by: disposBag)
+        
+        output.validText
+            .bind(to: nameValidationLabel.rx.text)
+            .disposed(by: disposBag)
+        
+        output.sceneTransition
+            .subscribe { _ in
+                self.present(ReactiveViewController(), animated: true, completion: nil)
+            }
+            .disposed(by: disposBag)
+    }
     
     func setup() {
         [nameTextFiled, button, nameValidationLabel].forEach {
