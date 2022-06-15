@@ -21,6 +21,8 @@
 		1B8CAFE1285899AF00647D18 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFE0285899AF00647D18 /* SubjectViewController.swift */; };
 		1B8CAFE7285993CF00647D18 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFE6285993CF00647D18 /* NetworkViewController.swift */; };
 		1B8CAFEB285997D900647D18 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8CAFEA285997D900647D18 /* RxAlamofire */; };
+		1B8CAFED2859A1CE00647D18 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */; };
+		1B8CAFEF2859C00A00647D18 /* ValidationViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1B8CAFDE28588F0900647D18 /* GradeVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeVIewController.swift; sourceTree = "<group>"; };
 		1B8CAFE0285899AF00647D18 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		1B8CAFE6285993CF00647D18 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
+		1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewConroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				1B8CAFDA28585DA900647D18 /* PickerVIewController.swift */,
 				1B8CAFE0285899AF00647D18 /* SubjectViewController.swift */,
 				1B8CAFE6285993CF00647D18 /* NetworkViewController.swift */,
+				1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */,
+				1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */,
 				1B8CAFC728585A3E00647D18 /* Assets.xcassets */,
 				1B8CAFC928585A3E00647D18 /* LaunchScreen.storyboard */,
 				1B8CAFCC28585A3E00647D18 /* Info.plist */,
@@ -170,9 +176,11 @@
 			files = (
 				1B8CAFC328585A3E00647D18 /* ViewController.swift in Sources */,
 				1B8CAFBF28585A3E00647D18 /* AppDelegate.swift in Sources */,
+				1B8CAFED2859A1CE00647D18 /* ReactiveViewController.swift in Sources */,
 				1B8CAFDD28588B6400647D18 /* Operator.swift in Sources */,
 				1B8CAFDB28585DA900647D18 /* PickerVIewController.swift in Sources */,
 				1B8CAFE1285899AF00647D18 /* SubjectViewController.swift in Sources */,
+				1B8CAFEF2859C00A00647D18 /* ValidationViewConroller.swift in Sources */,
 				1B8CAFDF28588F0900647D18 /* GradeVIewController.swift in Sources */,
 				1B8CAFC128585A3E00647D18 /* SceneDelegate.swift in Sources */,
 				1B8CAFE7285993CF00647D18 /* NetworkViewController.swift in Sources */,
