@@ -24,6 +24,7 @@
 		1B8CAFED2859A1CE00647D18 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */; };
 		1B8CAFEF2859C00A00647D18 /* ValidationViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */; };
 		1B8CAFF12859CD8100647D18 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFF02859CD8100647D18 /* ButtonViewController.swift */; };
+		1B8CAFF32859EAFC00647D18 /* InAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAFF22859EAFC00647D18 /* InAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
 		1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewConroller.swift; sourceTree = "<group>"; };
 		1B8CAFF02859CD8100647D18 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		1B8CAFF22859EAFC00647D18 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				1B8CAFE6285993CF00647D18 /* NetworkViewController.swift */,
 				1B8CAFEE2859C00A00647D18 /* ValidationViewConroller.swift */,
 				1B8CAFF02859CD8100647D18 /* ButtonViewController.swift */,
+				1B8CAFF22859EAFC00647D18 /* InAppViewController.swift */,
 				1B8CAFEC2859A1CE00647D18 /* ReactiveViewController.swift */,
 				1B8CAFC728585A3E00647D18 /* Assets.xcassets */,
 				1B8CAFC928585A3E00647D18 /* LaunchScreen.storyboard */,
@@ -188,6 +191,7 @@
 				1B8CAFC128585A3E00647D18 /* SceneDelegate.swift in Sources */,
 				1B8CAFE7285993CF00647D18 /* NetworkViewController.swift in Sources */,
 				1B8CAFF12859CD8100647D18 /* ButtonViewController.swift in Sources */,
+				1B8CAFF32859EAFC00647D18 /* InAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -309,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -326,18 +330,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2EZ5QWFYX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWeeks15/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MyWeeks15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jack.OfflineAdvanced;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -352,18 +358,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2EZ5QWFYX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWeeks15/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MyWeeks15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jack.OfflineAdvanced;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
